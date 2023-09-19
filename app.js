@@ -1,18 +1,14 @@
-// app.js
 const express = require("express");
 const app = express();
-const listViewRouter = require("./list-view-router"); // Rutas para listar tareas
-const listEditRouter = require("./list-edit-router"); // Rutas para editar tareas
+const listViewRouter = require("./list-view-router"); 
+const listEditRouter = require("./list-edit-router"); 
 
-// Middleware para el manejo de JSON en las solicitudes
 app.use(express.json());
 
-// Ruta principal para listar todas las tareas
 app.get("/tasks", (req, res) => {
   res.json(tasks);
 });
 
-// Implementa los routers de list-view y list-edit
 app.use("/list-view", listViewRouter);
 app.use("/list-edit", listEditRouter);
 
