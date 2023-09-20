@@ -25,4 +25,3 @@ router.get("/incomplete", (req, res) => {
 });
 
 module.exports = router;
-
